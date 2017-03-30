@@ -5,11 +5,31 @@
   <title>Cocina </title>
   <link rel="stylesheet" type="text/css" href="estilos.css">
  <script type="text/javascript">
-   var apellido = "Gómez";
-   alert(apellido);
-  for(var i=0; i<10;i++ ){
-  console.log("Vuelta: "+i);
+    var sabores_de_empanada = ["carne", "pollo", "verdura"];
+    console.log(sabores_de_empanada.length);
+    console.log(sabores_de_empanada);
+    sabores_de_empanada[sabores_de_empanada.length] = "cebolla";
+    console.log(sabores_de_empanada.length);
+    console.log(sabores_de_empanada);
+    sabores_de_empanada.push("ciruela");
+    console.log(sabores_de_empanada);
+    
+     var libros = ["El principito","El psicoanalista","El ruido y la furia"];
+    function libro(elemento, indice, lista){
+    console.log(elemento);
+    };
+    libros.forEach(libro);
+    
+    var ciudades = ["San Juan","Cordoba","Buenos Aires"];
+    function ciudad(elemento,indice,lista){
+     console.log("Elemento["+indice+"] = "+elemento);
   }
+  ciudades.forEach(function(elemento,indice,lista){
+    console.log("Elemento["+indice+"] = "+elemento);
+  });
+  console.log("esto es un forEach de declarando una funcion ciudad")
+  ciudades.forEach(ciudad);
+
  </script>
  </head>
  <body>
