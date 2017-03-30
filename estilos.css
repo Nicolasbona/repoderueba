@@ -1,0 +1,24 @@
+li{
+    color:#0C95F7;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: overline;
+    text-indent: 20px;
+    text-transform: capitalize;  /* primera letra mauscula */
+    padding: 5px 5px 5px 5px;
+    border: 5px solid #FF7700;
+    margin: 10px 10px 10px 10px;
+    width: 200px;
+    height: auto;
+    background: #CCCCCC
+    
+}
+ol{
+    list-style: upper-roman;
+}
