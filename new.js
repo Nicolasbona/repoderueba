@@ -177,3 +177,123 @@ var anabel = {
       this.dineroDisponible+=(this.sueldoBasico+this.bono.calcularMontoBono(this));
     }
 };
+
+// funcion Constructora
+
+function Televisor(vidaUtilEnHoras){
+	this.vidaUtilEnHoras=vidaUtilEnHoras;
+}
+
+//prototipo de a funcion Constructora Televisor
+Televisor.prototype={
+ encender: function() {
+  this.vidaUtilEnHoras = this.vidaUtilEnHoras - 0.01;
+ }
+}
+
+// Instanciando objetos con la funcion constructora televisor
+// que tienen instanciados el prototipo de encender
+
+var televisor = new Televisor(10000);
+var otroTelevisor = new Televisor(2000);
+
+// TESTEO DE PROTOTIPO DE HORMIGAS
+
+function HormigaComun(cantidad){
+	this.cantidadDeAlimentoTransportado=cantidad;
+}
+
+HormigaComun.prototype = {
+  recolectar: function(cantidad) {
+    this.cantidadDeAlimentoTransportado += cantidad;     
+  },
+  entregarAlimentoA: function(hormiguero) {
+    hormiguero.depositarAlimento(this.cantidadDeAlimentoTransportado);
+    this.cantidadDeAlimentoTransportado = 0;
+  }
+};
+
+function Hormiguero(alimentoADepositar,hormigas){
+	this.depositarAlimento=alimentoADepositar;
+  	hormigas.forEach(function(hormiga,indice,hormigas){
+    this.agregarHormiga(hormiga);
+    })
+}
+
+Hormiguero.prototype = {
+  depositarAlimento: function(cantidadAlimento) {
+    this.cantidadDeAlimento += cantidadAlimento;
+  }, 
+  agregarHormiga: function(hormiga) {
+    this.hormigas.push(hormiga);
+  },
+  reclamarAlimento: function(hormiga) {
+    this.hormigas.forEach(function(h){
+      h.entregarAlimentoA(this);
+    }, this);
+  },
+  expulsar: function(cantidad) {
+    this.hormigas.splice(0, 2);
+  }
+};
+
+function HormigaGuerrera(){};
+
+HormigaGuerrera.prototype = {
+  entregarAlimentoA: function(hormiguero) {
+  }
+};
+
+var unaHormiga = new HormigaGuerrera();
+var otraHormiga = new HormigaComun(10);
+var unHormiguero = new Hormiguero(200, [unaHormiga, otraHormiga]);
+
+
+// Otraa 
+
+function HormigaComun(cantidad){
+	this.cantidadDeAlimentoTransportado=cantidad;
+}
+
+HormigaComun.prototype = {
+  recolectar: function(cantidad) {
+    this.cantidadDeAlimentoTransportado += cantidad;     
+  },
+  entregarAlimentoA: function(hormiguero) {
+    hormiguero.depositarAlimento(this.cantidadDeAlimentoTransportado);
+    this.cantidadDeAlimentoTransportado = 0;
+  }
+};
+
+function Hormiguero(cantidadDeAlimento,hormigas){
+	this.cantidadDeAlimento=cantidadDeAlimento;
+    this.hormigas=hormigas;
+}
+
+Hormiguero.prototype = {
+  depositarAlimento: function(cantidadAlimento) {
+    this.cantidadDeAlimento += cantidadAlimento;
+  }, 
+  agregarHormiga: function(hormiga) {
+    this.hormigas.push(hormiga);
+  },
+  reclamarAlimento: function(hormiga) {
+    this.hormigas.forEach(function(h){
+      h.entregarAlimentoA(this);
+    }, this);
+  },
+  expulsar: function(cantidad) {
+    this.hormigas.splice(0, 2);
+  }
+};
+
+function HormigaGuerrera(){};
+
+HormigaGuerrera.prototype = {
+  entregarAlimentoA: function(hormiguero) {
+  }
+};
+
+var unaHormiga = new HormigaGuerrera();
+var otraHormiga = new HormigaComun(10);
+var unHormiguero = new Hormiguero(200, [unaHormiga, otraHormiga]);
