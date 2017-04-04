@@ -1,0 +1,113 @@
+
+Array.prototype.concat()
+
+The concat() 
+    method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+
+Syntax
+    var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+
+rameters
+
+valueN
+    Arrays and/or values to concatenate into a new array. See the description below for details.
+
+Return value
+    A new Array instance.
+
+Description
+The concat method creates a new array consisting of the elements in the object on which it is called, followed in order by, for each argument, the elements of that argument (if the argument is an array) or the argument itself (if the argument is not an array). It does not recurse into nested array arguments.
+The concat method does not alter this or any of the arrays provided as arguments but instead returns a shallow copy that contains copies of the same elements combined from the original arrays. Elements of the original arrays are copied into the new array as follows:
+Object references (and not the actual object): concat copies object references into the new array. Both the original and new array refer to the same object. That is, if a referenced object is modified, the changes are visible to both the new and original arrays. This includes elements of array arguments that are also arrays.
+Strings, numbers and booleans (not String, Number, and Boolean objects): concat copies the values of strings and numbers into the new array.
+
+
+
+Set.prototype.add()
+
+The add() method appends a new element with a specified value to the end of a Set object.
+
+Syntax
+    mySet.add(value);
+
+Parameters
+
+    value
+        Required. The value of the element to add to the Set object.
+    Return value
+    
+The Set object.
+
+
+
+Array.prototype.forEach()
+
+Resumen
+    El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+
+Sintaxis
+    array.forEach(callback[, thisArg])
+
+Parámetros
+
+callback
+    Función a ejecutar por cada elemento, que recibe tres argumentos:
+
+    currentValue
+        El elemento actual siendo procesado en el array.
+    
+    index
+        El índice del elemento actual siendo procesado en el array.
+    
+    array
+        El arreglo en el que forEach esta siendo aplicado.
+
+thisArg
+    Opcional. Valor que se usará como this cuando se ejecute el callback.
+
+Descripción
+    
+    forEach() ejecuta la función callback una vez por cada elemento presente en el array en orden ascendente. No es invocada para índices que han sido eliminados o que no hayan sido inicializados (Ej. sobre arrays sparse)
+
+callback es invocada con tres argumentos:
+
+el valor del elemento
+el índice del elemento
+el array que está siendo recorrido
+Si un parámetro thisArg es proporcionado a forEach, será usado como el valor this para cada invocación de callback como si se llamara a callback.call(thisArg, element, index, array). Si thisArg es undefined o null, el valor this dentro de la función depende si la función está o no en modo estricto (valor pasado si está en modo estricto, objeto global si está en modo no-estricto).
+
+El rango de elementos procesados por forEach() se establece antes de la primera invocación del callback. Los elementos que sean añadidos al arreglo después de que inicie la llamada a forEach no serán visitados por callback. Si los valores de los elementos existentes en el arreglo son modificados, el valor pasado al callback será el valor al momento de que forEach los visite; no se evaluarán los elementos borrados antes de ser visitados por forEach.
+
+forEach() ejecuta la función callback una vez por cada elemento del array; a diferencia de map() o reduce() este siempre devuelve el valor undefined y no es encadenable. El típico uso es ejecutar los efectos secundarios al final de la cadena.
+
+
+Function.prototype.call()
+
+Resumen
+    El método call() llama a una función con un valor this asignado y argumentos provistos de forma individual.
+
+
+Sintaxis
+    fun.call(thisArg[, arg1[, arg2[, ...]]])
+
+Parametros
+
+thisArg
+    El valor de this provisto por la llamada a fun. Note que este puede no ser el valor actual visto por el método: si el método es una función en código modo no estricto, null y undefined serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
+
+arg1, arg2, ...
+    Argumentos para el objeto.
+
+Valores de retorno
+
+El resultado de llamada a la función con los parametros definidos con this y los argumentos.
+Descripción
+Un objeto diferente this puede ser asignado cuando una función existente es llamada. this se refiere a el objeto actual, el objeto invocador. Con call, puedes escribir un método una vez y entonces heredarlo en otro objeto, sin tener que reescribir el método para el nuevo objeto.
+
+
+clouse
+
+funciones anonimas, toma el contexto de donde esta declarada
+
+
+
