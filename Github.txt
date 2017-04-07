@@ -1,0 +1,68 @@
+-git init
+
+    inicializa el repo
+
+-git status
+
+    estado de la copia local
+
+-git add (nombe del archivo)
+
+    notifica que debe empeza a controlar, es decir lo agrega al area de stagin
+
+-git comit -m "mesaje"
+
+    cuando hacemos el comit,  guardara todo lo que icimos asta el add
+    es la acción que persiste una `foto` del estado de un proyecto en el historial de un repositorio.
+
+-git log
+
+    comandos
+        --oneline (muestra el log en una soloa liinea)
+        -p (cuales fueron todos los cambios)
+        -- nombre del archivo (muestra los comits que modificaron un arichivo)
+
+    ve las reviciones del proecto y cuando fue el ultimo comit
+
+-git diff
+
+    que cambio en cada archivo
+
+-git checkout (nombre del archivo/version)
+
+    parametros
+        master (vuelve a la ultima version)
+
+    descarta los cambios volviendo a a vercion a a que deseamos o nos permite vovler a a vercion deseada incluso a otra rama
+
+
+-git branch (nombre de la rama)
+
+    parametros
+        -d (permite eliminar la rama deseada)
+
+    crea/elimina una rama en paalelo del master
+
+-git merge (nombre de la rama)
+
+    copia en a rama pirncipia con cualquier rama
+
+-git clone (url)
+
+    clona un repositorio
+
+-git pull (url)
+
+    baja cambios
+
+-git push (url)
+
+    sube nuevos cambios
+
+
+-git remote add (origin) (nombre)
+
+    crea un remoto del repositorio de manera remota
+
+
+
