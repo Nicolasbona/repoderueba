@@ -105,9 +105,56 @@ Descripción
 Un objeto diferente this puede ser asignado cuando una función existente es llamada. this se refiere a el objeto actual, el objeto invocador. Con call, puedes escribir un método una vez y entonces heredarlo en otro objeto, sin tener que reescribir el método para el nuevo objeto.
 
 
-clouse
+clousure
 
 funciones anonimas, toma el contexto de donde esta declarada
 
+
+
+
+
+jQuerry
+
+    $("elemnto o clase css").hide();
+
+        oculta un elemento
+
+    $("elemnto o case css").show();
+
+        muestra un elemento
+
+    $("elemnto o clase css").fadeIn(valor);
+     
+        hace aparecer paulatinamente un elemento de acuerdo al valor en milisegundos
+
+    $("elemnto o clase css").fadeOut(valor);
+
+        hace desaparecer paulatinamente un elemento de acuerdo al valor en milisegundos
+    
+
+    $("elemnto o clase css").slideDown(valor);
+
+        hace aparecer un elemento desde abajoo hacia arriba de acuerdo al valor en milisegundos
+
+    $("elemnto o case css").slideUp(valor);
+
+        hace desaparecer un elemento desde abajoo hacia arriba de acuerdo al valor en milisegundos 
+
+
+$("#elemento").animate({"opacity": "0.5", "margin-left": "10px", "height": "toggle"}, 1000);
+
+
+
+
+selectores medios
+
+    .children("elemnto o clase css")
+
+        permite seleccionar a los hijos de la clase/id/elemnto
+
+
+    .parent("elemnto o clase css")
+
+        permite seeccionar a los padres de a clase/id/elmento
 
 

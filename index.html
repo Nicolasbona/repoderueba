@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Cocina </title>
   <link rel="stylesheet" type="text/css" href="estilos.css">
- <script type="text/javascript">
+  <script src="jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
     var sabores_de_empanada = ["carne", "pollo", "verdura"];
     console.log(sabores_de_empanada.length);
     console.log(sabores_de_empanada);
@@ -29,9 +30,18 @@
   });
   console.log("esto es un forEach de declarando una funcion ciudad")
   ciudades.forEach(ciudad);
+  $(document).ready(function(){
+  $("h1").hide();
+  $("h1").fadeIn();
+  $("*").fadeOut(10000);
+	$("*").fadeIn(10000);
+  $("h1").slideDown();
+  console.log("cargo el archivo");
+});
  </script>
  </head>
  <body>
+   <h1>TITULO PRUEBA</h1>
    <ol>
     <li>Pelar los tomates</li>
     <li>Saltear las cebollas</li>
