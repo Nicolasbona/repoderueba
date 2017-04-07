@@ -14,7 +14,8 @@ li{
     padding: 5px 5px 5px 5px;
     border: 5px solid #FF7700;
     margin: 10px 10px 10px 10px;
-    width: 200px;
+    max-width: 70%;
+    min-width:20%;
     height: auto;
     background: #CCCCCC
     
@@ -22,3 +23,80 @@ li{
 ol{
     list-style: upper-roman;
 }
+
+
+
+a img{
+    /*margin-left:500px;*/
+    float: right; 
+}
+
+/*
+* {
+  box-sizing: border-box;
+  border-box define el tamaño total de la caja en 
+  el tamaño dado es decir si colocamos 100 px esto
+  da igual a la suma de pading, content y border
+
+  box-sizing: content-box;
+  por default lo que uilizan las cajas en html
+  es decir lo que y defina es o que tomar al final
+  como la suma de los valores que le di a a caja
+ 
+ Fondo
+    background-color: color (Deine el color de fondo)
+    background-image: url ("relativa/absoluta") define una imagen de fondo
+    background-repeat: no-repeat; no repite en mosaico la imagen
+    background-repeat: repeat-x; repite solo en x
+    background-repeat: repeat-y; repite solo en y
+    background-position: top left; coloca la imagen donde la quieras colocar puede ser tano top botomo cente como condenada numerica
+    background-attachment: scroll; a iamgen sigue el scroll del mouse
+    background-attachment: fixed; la imagen se queda fija
+   
+   
+   
+   }
+   seector+seector {} adyasente por ej:
+   h1+p{} aplicara a todos los p que vengan despues de un h1
+
+seudo-clases 
+
+selector:first-child  first-child afecta a todos los sectores que son primeros hijos de otra clase
+h1 p:first-child afecta a todos los primeros p de h1
+
+selector:last-child
+funciona igual que el anterior pero con el ultimo
+
+lang
+p:lang(es) {
+
+}
+lang afecta por ej n este caso a todos los p con lang="es"
+
+focus 
+ej:
+input:focus{
+border: 1px solid #00FF00;
+}
+ coloca un borde verde sobre el campo que se esta aciendo foco
+
+Enabled
+ej:
+input:enabled {
+
+}
+ sirve para editar el contenid habilitados
+
+form:enabled select,form:enabled input{
+color:#000;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+Disable 
+ sirve para editar el contenido desabilitado
+
+input:disabled {
+
+}
+
+*/
