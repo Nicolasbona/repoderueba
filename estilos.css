@@ -106,9 +106,22 @@ redondea los borders
 
 box-shadow: color lonitud corrimiento x corrimiento en y, blur (difuminacion), inset(la sobe debe ir adentro de la caja, opcional);
 
-ej:
+    ej:
 
-box-sadow: #000000 10px 0px 0px inset
+        box-sadow: #000000 10px 0px 0px inset
 
+
+text-shadow: 0px 3px 1px #000; (al igual que box-shadow)
+
+
+
+hsl(hiuge, saturaion, lightnes);
+
+rgba(red(0-255),green(0-255), blue(0-255), transparenci)
+
+transform:
+    permite rotar, tnsladar un elento
+
+        rotate(45deg) transtlate(X o Y)(45px)  skew (inclianacion) 
 
 */
