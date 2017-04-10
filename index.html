@@ -33,10 +33,14 @@
   $(document).ready(function(){
   $("h1").hide();
   $("h1").fadeIn();
-  $("*").fadeOut(10000);
-	$("*").fadeIn(10000);
+  $("h1").click(function(){
+    $(this).html("<h2>Cambiando el titulo</h2>");
+	 //$("h1").fadeIn(1000);
+  })
+  
   $("h1").slideDown();
   console.log("cargo el archivo");
+  //$("h1").html("<h2>Cambiando el titulo</h2>")
 });
  </script>
  </head>

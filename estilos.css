@@ -4,6 +4,8 @@ li{
     font-size: 16px;
     font-style: normal;
     font-weight: bold;
+    border-radius: 10px;
+    box-shadow: #444 5px 10px 10pxc;
     letter-spacing: 3px;
     word-spacing: 10px;
     line-height: 20px;
@@ -98,5 +100,15 @@ Disable
 input:disabled {
 
 }
+
+border-radius
+redondea los borders
+
+box-shadow: color lonitud corrimiento x corrimiento en y, blur (difuminacion), inset(la sobe debe ir adentro de la caja, opcional);
+
+ej:
+
+box-sadow: #000000 10px 0px 0px inset
+
 
 */

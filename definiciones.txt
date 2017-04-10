@@ -130,6 +130,10 @@ jQuerry
     $("elemnto o clase css").fadeOut(valor);
 
         hace desaparecer paulatinamente un elemento de acuerdo al valor en milisegundos
+
+    $("elemnto o clase css").fadeToggle(valor);
+
+        hace que si elemento este oculto lo muestre  si esta visible lo oculta
     
 
     $("elemnto o clase css").slideDown(valor);
@@ -138,12 +142,44 @@ jQuerry
 
     $("elemnto o case css").slideUp(valor);
 
-        hace desaparecer un elemento desde abajoo hacia arriba de acuerdo al valor en milisegundos 
+        hace desaparecer un elemento desde abajoo hacia arriba de acuerdo al valor en milisegundos
+
+   $("elemnto o clase css").slideToggle(valor);
+
+        hace que si elemento este oculto lo muestre  si esta visible lo oculta en forma de slide     
 
 
-$("#elemento").animate({"opacity": "0.5", "margin-left": "10px", "height": "toggle"}, 1000);
+    $("elemnto o clase css").animate({"opacity": "0.5", "margin-left": "10px", "height": "toggle"}, valor);
+
+        permite armar una animacion personalisada que recibe un objeto con valores de css y como segundo
+        parametro un tiempo en milisegundos esto tomara los valores iniciales del elemento y los ara cambiar
+        hasa el valor indicado
 
 
+    $("#clase css").html("<li>Nuevo item</li>");
+
+        permite modificar el html, es decir el contenido aregando o ediando lo enviado
+
+    $("selector").attr("atributo", "valor");
+
+        attr permite moficiar atributos de un alemento html o si no le pasamos un "valor" guardar
+        dicho valor en una variable
+
+    $("elemnto o clase css").css("atributo", "valor" o un objeto con los vares a modificar);
+
+        permite modificar un un atributo css o en caso de no pasar un "valor", almacenar el mismo
+
+    $("elemnto o clase css").click(function(){
+        $(this).propiedad => hace reerencia al  elemnto o clase css al cual le aplicamos una propiedad
+    });
+
+        el evento de click nos permite agregar comportamiento a elementos o clases css al cickear sobre el mismo, recibe por parametro una funcion 
+        puede o no ser anonima
+
+    $("elemnto o clase css").hover( function(){()} , function(){} );
+
+        el evento hover nos permite agregar comportamiento para cuando se posiciona el mouse sobre el elemento, la primera funcion recibe el evento cuando estamos arriba
+        la segunda recive el evento de cuando nos alejamos del elemento
 
 
 selectores medios
@@ -155,6 +191,14 @@ selectores medios
 
     .parent("elemnto o clase css")
 
-        permite seeccionar a los padres de a clase/id/elmento
+        permite seeccionar a los padres de la clase/id/elmento
 
+    
+    .closest("elemnto o clase css")
+
+        permite selecionar al proximo mas secano de la clase/id/elmento
+
+    .find("elemnto o clase css")
+
+        permite filtrar a todos los decendintes y bucar el contenido dado
 
