@@ -274,3 +274,36 @@ function capitalize(string){
     }
 }
 
+/*
+Este es el ejercicio de fizzbuzz del elocuent js una forma de usar el or con el output muy interesante
+
+for(i=1;i<=100;i++){
+        var salida="";
+      	if(i%3==0){
+          salida+="Fizz";
+        }
+        if(i%5==0){
+          salida+="Buzz";
+        }
+        console.log(salida||i);      
+        }
+Hacer un ajedrez del elecuent js
+
+var chess="";
+for(i=1;i<=8;i++){
+  for(j=1;j<=8;j++){
+    if((i+j)%2==0){
+      chess+=" ";
+    }else{
+      chess+="#";
+    }
+  }
+  chess+="\n";
+}
+
+console.log(chess);
+
+
+
+
+*/
