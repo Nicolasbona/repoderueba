@@ -304,6 +304,33 @@ for(i=1;i<=8;i++){
 console.log(chess);
 
 
+ // esta funcion permite recursivamente buscar con numeros primos de 1 dijito (sea sumando o multiplicando ) un camino para formar el numero dado ej: 10 = 1 x 7+ 3
+
+function buscarSolucion (numero) {
+	function encontrarCamino(inicio,recorrido){
+		if(inicio==numero){
+        	return recorrido+" = "+numero;		
+		}
+		else if (inicio>numero){
+			return null;
+		}
+		else {
+			return encontrarCamino(inicio*7, recorrido+" x 7") ||
+			       encontrarCamino(inicio*5, recorrido+" x 5") ||
+			       encontrarCamino(inicio*3, recorrido+" x 3") ||
+			       encontrarCamino(inicio*2, recorrido+" x 2") ||
+			       encontrarCamino(inicio+7, recorrido+" + 7") ||
+			       encontrarCamino(inicio+5, recorrido+" + 5") ||
+			       encontrarCamino(inicio+3, recorrido+" + 3") ||
+			       encontrarCamino(inicio+2, recorrido+" + 2") ||
+			       encontrarCamino(inicio+1, recorrido+" + 1") ;
+				     
+				     
+		}
+	}
+	return encontrarCamino(1,"1");
+}
+ console.log(buscarSolucion(10));
 
 
 */
