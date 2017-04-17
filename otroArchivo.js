@@ -333,4 +333,194 @@ function buscarSolucion (numero) {
  console.log(buscarSolucion(10));
 
 
+
+// Your code here.
+function range(start, end){
+var array = [];
+  if(arguments.length>=3){
+	if(arguments[2]>=1){
+      
+      for (i=start;i<=end;i+=arguments[2]){
+         array.push(i);
+        }
+    }else{
+      for (i=end;i<=start;i-=arguments[2]){
+         array.unshift(i);
+        }
+    }
+ }else{
+   for (i=start;i<=end;i++){
+      array.push(i);
+   }
+  }
+  return array;
+}
+
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
+
+console.log(sum(range(1, 10)));
+// → 55
+
+
+// MI SOLUCION  EJERCICIO 4.1
+function reverseArray(array){
+var newArray=[];
+  for(i=array.length-1;i>=0;i--){
+  	newArray.push(array[i]);
+  }
+  return newArray;
+}
+
+// SOLUCION DEL ELOCUENT EJERCICIO 4.1
+
+function reverseArray(array){
+var newArray=[];
+  for(i=0;i<array.length;i++){
+  	newArray.unshift(array[i]);
+  }
+  return newArray;
+}
+
+function reverseArray(array){
+var newArray=[];
+  for(i=0;i<array.length;i++){
+  	newArray.unshift(array[i]);
+  }
+  return newArray;
+}
+
+/// MI SOLUCION  EJERCICIO 4.2
+function reverseArrayInPlace(array){
+  if (array.length%2===0){
+    for(i=0;i<Math.floor(array.length/2);i++){
+      var element =array[array.length-1-i];
+      array[array.length-1-i]=array[i];
+      array[i]=element;
+    }
+  }else{
+    for(i=0;i<=Math.floor(array.length/2);i++){
+      var element =array[array.length-1-i];
+      array[array.length-1-i]=array[i];
+      array[i]=element; 
+      }
+  }
+return array;
+}
+
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
+
+// SOLUCION DEL  ELOCUENT  EJERCICIO 4.2
+function reverseArray(array) {
+  var output = [];
+  for (var i = array.length - 1; i >= 0; i--)
+    output.push(array[i]);
+  return output;
+}
+
+function reverseArrayInPlace(array) {
+  for (var i = 0; i < Math.floor(array.length / 2); i++) {
+    var old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}
+
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
+
+/// MI SOLUCION  EJERCICIO 4.3
+
+function arrayToList(array){
+  var list=null;
+  for(i=array.length-1; i>=0;i--){
+    list={valor:array[i], next:list};
+  }
+  return list;
+}
+
+function listToArray(list){
+	var newArray=[];
+  	for(i=list; i; i=i.next){
+    newArray.push(i.valor);
+    }
+  return newArray
+}
+
+function prepend(value,list){
+	list={valor:value, list};
+ 	return list; 
+}
+
+function nth(list,position,number){
+	if(number==undefined){
+  		var number=0;
+    }
+	if(!list){
+    return undefined;
+    }else if(position==number){
+    	return list.valor;
+    }else{
+    	return nth(list.next,position,number+1);
+    }   
+}
+
+console.log(arrayToList([10, 20]));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30])));
+// → [10, 20, 30]
+console.log(prepend(10, prepend(20, null)));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth(arrayToList([10, 20, 30]), 1));
+// → 20
+
+
+// MI SOLUCION  EJERCICIO 4.4
+
+function deepEqual (obj,obj2){
+	var variablesA=0, variablesB=0;	
+   	if(obj===obj2){
+    	return true;
+    }
+    if(obj==null || typeof obj != "object" || obj2== null || typeof obj2 != "object"){
+    	return false;
+    }
+	for (propiedad in obj){
+    	variablesA+=1;
+     
+    }
+  	for (var propiedad in obj2){
+    		variablesB+=1;
+      		if(!(propiedad in obj) || !deepEqual(obj[propiedad],obj2[propiedad])){
+        	return false; 
+        }
+    
+    }
+ 	  	return variablesA==variablesB;
+ 
+  	}
+
+
+
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
+
+
 */
