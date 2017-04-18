@@ -523,4 +523,41 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
 // → true
 
 
+// MI SOLUCION
+var arrays = [[1, 2, 3], [4, 5], [6]];
+// Your code here.
+function concatArrays(array){
+  	for(i=0;i<array.length;i++){
+    newArray=newArray.concat(array[i]);
+    }
+  return newArray;
+}
+console.log(concatArrays(arrays));
+ 
+ // MI SOLUCION CON EL METODO REDUCE
+
+ console.log(arrays.reduce(function(acumulator=[],currentValue){
+  	acumulator=acumulator.concat(currentValue);
+ 	return acumulator;
+	},[]));
+  	
+function average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+var byName = {};
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+
+var differences = ancestry.filter(function(person) {
+  return byName[person.mother] != null;
+}).map(function(person) {
+  return person.born - byName[person.mother].born;
+});
+
+console.log(average(differences));
+// → 31.2
+
 */
